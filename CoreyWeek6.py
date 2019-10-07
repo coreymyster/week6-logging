@@ -11,6 +11,7 @@ test_logger.addHandler(logstash.LogstashHandler('3.80.60.207', 5959, version=1))
 #test_logger.info('python-logstash: test logstash info message.')
 #test_logger.warning('python-logstash: test logstash warning message.')
 
+# Checks the username and password passed in. Logs the result.
 def getUser(name, password):
     if name == "Corey" and password == "password":
         test_logger.info('Successful user login')
@@ -28,6 +29,7 @@ extra = {
     'test_list': [1, 2, 3]
 }
 
+# The parameters can be altered in order to generate different logs. The default parameters below will log 'info'.
 getUser("Corey", "password")
 
 #test_logger.info('python-logstash: test extra fields', extra=extra)
